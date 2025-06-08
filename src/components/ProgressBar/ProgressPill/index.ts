@@ -1,1 +1,0 @@
-export { ProgressPill } from "./ProgressPill";

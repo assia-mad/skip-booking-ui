@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { MOBILE_BREAKPOINT } from "@/utils";
+import { useEffect, useState } from "react";
 
-export function useMobileDetection() {
+export const useMobileDetection = (): boolean => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () =>
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -14,4 +14,4 @@ export function useMobileDetection() {
   }, []);
 
   return isMobile;
-}
+};

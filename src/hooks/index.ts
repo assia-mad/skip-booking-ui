@@ -1,1 +1,2 @@
-export { useMobileDetection } from "./useMobileDetection";
+export * from "./useMobileDetection";
+export * from "./useProgressBarLogic";
