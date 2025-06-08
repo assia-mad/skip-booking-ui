@@ -1,48 +1,44 @@
 import { type IProgressStep } from "@/types";
 
-export function getCurrentStep(
+export const getCurrentStep = (
   steps: IProgressStep[],
-): IProgressStep | undefined {
+): IProgressStep | undefined => {
   return steps.find((step) => step.status === "current");
-}
+};
 
-export function getCurrentStepNumber(steps: IProgressStep[]): number {
+export const getCurrentStepNumber = (steps: IProgressStep[]): number => {
   const index = steps.findIndex((step) => step.status === "current");
   return index !== -1 ? index + 1 : steps.length;
-}
+};
 
-export function getVisibleSteps(
+export const getVisibleSteps = (
   steps: IProgressStep[],
   currentStepNumber: number,
   offset: number,
-): Array<IProgressStep | null> {
-  const totalSteps = steps.length;
+): (IProgressStep | null)[] => {
   const currentIndex = currentStepNumber - 1;
   const startIndex = Math.max(
     0,
-    Math.min(currentIndex + offset - 1, totalSteps - 3),
+    Math.min(currentIndex + offset - 1, steps.length - 3),
   );
 
-  const visibleSteps: Array<IProgressStep | null> = [];
-  for (let i = 0; i < 3; i++) {
-    visibleSteps.push(
-      startIndex + i < totalSteps ? steps[startIndex + i] : null,
-    );
-  }
-  return visibleSteps;
-}
+  return Array.from({ length: 3 }, (_, i) => {
+    const step = steps[startIndex + i];
+    return step ?? null;
+  });
+};
 
-export function canNavigatePrevious(
+export const canNavigatePrevious = (
   currentStepNumber: number,
   offset: number,
-): boolean {
+): boolean => {
   return currentStepNumber + offset > 1;
-}
+};
 
-export function canNavigateNext(
+export const canNavigateNext = (
   currentStepNumber: number,
   offset: number,
   totalSteps: number,
-): boolean {
+): boolean => {
   return currentStepNumber + offset < totalSteps - 2;
-}
+};
