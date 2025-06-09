@@ -1,9 +1,12 @@
-import { ProgressBar } from "./components/ProgressBar";
+import { ProgressBar } from "@/components";
+import { SkipSelectionPage } from "@/pages/SkipSelectionPage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div>
       <ProgressBar />
+      <SkipSelectionPage />
     </div>
   );
 }
