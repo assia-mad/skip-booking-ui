@@ -8,17 +8,27 @@ module.exports = {
         "accent-yellow": "#FFE492",
         "accent-blue": "#4F9CF9",
         "accent-light": "#C4DEFD",
+        "success-green": "#22c55e",
+        "warning-amber": "#f59e0b",
+        "error-red": "#dc2626",
+        gray: {
+          50: "#f9fafb",
+          100: "#f3f4f6",
+          200: "#e5e7eb",
+          400: "#9ca3af",
+          500: "#6b7280",
+          600: "#4b5563",
+        },
+        red: {
+          600: "#dc2626",
+        },
+        amber: {
+          600: "#d97706",
+        },
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
-        heading: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "Helvetica", "Arial", "sans-serif"],
+        heading: ["Poppins", "system-ui", "sans-serif"],
         mono: ["Fira Code", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       animation: {

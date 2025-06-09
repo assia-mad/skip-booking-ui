@@ -1,5 +1,3 @@
-"use client";
-
 import type { FC } from "react";
 import { Check } from "lucide-react";
 import type { IProgressStep } from "@/types";
@@ -22,7 +20,7 @@ export const ProgressPill: FC<ProgressPillProps> = ({
       ? "bg-accent-yellow text-primary-dark border-accent-yellow hover:scale-105 shadow-sm"
       : step.status === "current"
         ? "bg-accent-blue text-white border-accent-blue shadow-md scale-105"
-        : "bg-accent-light/30 text-gray-500 border-accent-light";
+        : "bg-white text-gray-500 border-accent-light shadow-sm";
 
   const fontClass = "font-sans"; //Inter
 
