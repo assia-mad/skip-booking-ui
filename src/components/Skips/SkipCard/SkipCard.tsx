@@ -45,15 +45,15 @@ export const SkipCard = ({ skip, isSelected, onSelect }: ISkipCardProps) => {
       />
 
       {/* Content Section */}
-      <div className="p-4 sm:p-6 lg:p-8">
-        <h3 className="text-xl sm:text-2xl font-bold text-primary-dark mb-2">
+      <div className="p-3 sm:p-5 lg:p-6">
+        <h3 className="text-xl sm:text-2xl font-bold text-primary-dark mb-1.5">
           {skip.size} Yard Skip
         </h3>
-        <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
+        <p className="text-sm sm:text-base text-gray-600 mb-2 sm:mb-3">
           {skip.hire_period_days} day hire period
         </p>
 
-        <div className="mb-4 sm:mb-5">
+        <div className="mb-3 sm:mb-4">
           <p className="text-2xl sm:text-3xl font-bold text-accent-blue">
             {skip.formattedPrice}
           </p>
