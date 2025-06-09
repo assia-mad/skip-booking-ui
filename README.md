@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# Skip Selector UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Preview
+You can find the live preview of the project deployed to netlify via this link: https://velvety-dasik-805471.netlify.app/
 
-Currently, two official plugins are available:
+## Sandbox Link
+The sandbox link can be found via this link: https://codesandbox.io/p/github/assia-mad/skip-booking-ui/main?import=true
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## Expanding the ESLint configuration
+A modern skip selection interface built with React, TypeScript, and Tailwind CSS, emphasizing clean architecture, responsive design, and exceptional user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Architecture & Code Quality
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+### Project Structure
+src/
+├── components/       # Reusable UI components
+├── hooks/           # Custom React hooks
+├── pages/           # Page-level components
+├── services/        # API integration layer
+├── types/           # TypeScript definitions
+└── utils/           # Helper functions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+### Technical Implementation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+**Clean Code Principles**
+- Single responsibility components
+- Descriptive naming conventions
+- DRY principle throughout
+- Proper separation of concerns
+
+**React Best Practices**
+- Functional components with hooks
+- Component composition pattern
+- Proper prop drilling avoidance
+
+**TypeScript Integration**
+- Strict type checking enabled
+- Interface definitions for all data structures
+- Type-safe props and state management
+
+**Custom Hooks**
+- `useSkipData` - Encapsulates API calls and data fetching
+- `useSkipSelection` - Manages selection state and logic
+- `useMobileDetection` - Handles responsive behavior
+- Clean abstraction of business logic from UI
+
+**Error Handling**
+- Dedicated error boundary components
+- Loading states for better UX
+- User-friendly error messages
+
+**Tailwind CSS Architecture**
+- Utility-first approach for rapid development
+- Consistent spacing with 8px grid system
+- Semantic color variables
+- Responsive utilities for all breakpoints
+
+## Design Implementation
+
+### Visual Design
+- Card-based layout for optimal information display
+- Clear visual hierarchy with typography scale
+- Professional color coding for features and restrictions
+- Smooth transitions and hover states
+
+### User Experience
+- Sticky summary bar for constant selection visibility
+- One-click selection process
+- Clear pricing and feature display
+- Touch-optimized interactive elements
+- Instant visual feedback on interactions
+
+### Responsive Design
+- Mobile-first development approach
+- Fluid layouts adapting to all screen sizes
+- Optimized touch targets for mobile devices
+- Consistent experience across devices
+
+## Key Features
+
+- **Skip Cards**: Visual representation with all essential information
+- **Smart Selection**: Persistent selection state with visual indicators
+- **Loading States**: Skeleton screens during data fetching
+- **Error Recovery**: Graceful handling of API failures
+- **Type Safety**: Complete TypeScript coverage preventing runtime errors
+
+## Technical Stack
+
+- React 18 with Hooks
+- TypeScript 4.x
+- Tailwind CSS 3.x
+- Modern ES6+ JavaScript
+- Component-based architecture
+
+## Code Quality Metrics
+
+- 100% TypeScript coverage
+- Modular component structure
+- Reusable custom hooks
+- Consistent code style
+
+---
+
+This implementation demonstrates modern frontend development practices, combining technical excellence with user-centered design principles.
